@@ -2,7 +2,7 @@
 <?php
 
 	$myfile = fopen("logCommitsBitBucket.txt", "w");
-	fwrite($myfile, "Webhook me acionou");
+	fwrite($myfile, $_SERVER['HTTP_X_GITHUB_EVENT']);
 	fclose($myfile);
 
 	/*
