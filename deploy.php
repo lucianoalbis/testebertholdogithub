@@ -4,7 +4,7 @@
 	//$myfile = fopen("logCommitsBitBucket.txt", "w");
 	//fwrite($myfile, "Webhook me acionou");
 	//fclose($myfile);
-
+	/*
 	if(function_exists('exec')) {
     	echo "exec is enabled\n";
 
@@ -25,4 +25,10 @@
 	else {
 		echo "\nexec is disabled";
 	}
+	*/
+
+	if ( $_POST['payload'] ) {
+	  shell_exec( 'cd /var/www/teste-bertholdo-github/ && git reset --hard HEAD && git pull' );
+	}
+
 ?>
