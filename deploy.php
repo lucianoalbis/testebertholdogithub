@@ -28,7 +28,7 @@
 	*/
 
 	if ( $_POST['payload'] ) {
-	  shell_exec( 'cd /var/www/teste-bertholdo-github/ && git reset --hard HEAD && git pull' );
+	  shell_exec( 'cd /var/www/html/teste-bertholdo-github/ && git reset --hard HEAD && git pull' );
 	}
 
 ?>
