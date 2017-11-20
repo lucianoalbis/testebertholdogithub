@@ -1,9 +1,10 @@
 
 <?php
 
-	//$myfile = fopen("logCommitsBitBucket.txt", "w");
-	//fwrite($myfile, "Webhook me acionou");
-	//fclose($myfile);
+	$myfile = fopen("logCommitsBitBucket.txt", "w");
+	fwrite($myfile, "Webhook me acionou");
+	fclose($myfile);
+
 	/*
 	if(function_exists('exec')) {
     	echo "exec is enabled\n";
