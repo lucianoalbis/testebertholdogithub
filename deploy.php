@@ -33,8 +33,7 @@
 		
 			$myfile = fopen("logCommitsBitBucket.txt", "w");
 			
-			fclose($myfile);
-		
+					
 		exec("sudo git pull -f 2>&1", $output, $return_val);
 		if($return_val !== 0) {
 		    //echo "Error 2\n";
