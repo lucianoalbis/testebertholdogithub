@@ -39,7 +39,7 @@
 		    //echo "Error 2\n";
 		    //print_r($output);
 			
-			fwrite($myfile, $output);
+			fwrite($myfile, "no");
 		}
 		else
 		{
