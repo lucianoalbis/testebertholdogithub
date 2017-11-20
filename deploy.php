@@ -25,5 +25,4 @@
 	else {
 		echo "\nexec is disabled";
 	}
-
 ?>
