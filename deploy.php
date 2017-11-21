@@ -33,7 +33,7 @@
 		
 		$myfile = fopen("logCommitsBitBucket.txt", "w");	
 		$whoami = shell_exec("whoami");
-		fwrite($myfile, $whoami);
+		fwrite($myfile, "whoami: $whoami");
 		
 		$git_pull = shell_exec("git pull 2>&1");
 		fwrite($myfile, $git_pull);
