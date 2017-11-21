@@ -32,12 +32,33 @@
 	  //exec( 'cd /var/www/html/teste-bertholdo-github/ && git reset --hard HEAD && git pull' );
 		
 		$myfile = fopen("logCommitsBitBucket.txt", "w");	
-		$whoami = shell_exec("whoami");
-		fwrite($myfile, "whoami: $whoami");
+		//$whoami = shell_exec("whoami");
+		//fwrite($myfile, "whoami: $whoami");
 		
-		$git_pull = shell_exec("git pull 2>&1");
-		fwrite($myfile, "git pull: $git_pull");
+		//$git_pull = shell_exec("git pull 2>&1");
+		//fwrite($myfile, "git pull: $git_pull");
 		
+		// The commands
+		$commands = array(
+			'echo $PWD',
+			'whoami',
+			'git pull',
+			'git status',
+			'git submodule sync',
+			'git submodule update',
+			'git submodule status',
+		);
+		// Run the commands for output
+		$output = '';
+		foreach($commands AS $command){
+			// Run it
+			$tmp = shell_exec($command);
+			// Output
+			//$output .= "<span style=\"color: #6BE234;\">\$</span> <span style=\"color: #729FCF;\">{$command}\n</span>";
+			$output .= $command;
+			$output .= htmlentities(trim($tmp)) . "\n";
+		}
+		fwrite($myfile, "output: $output");
 		fclose($myfile);
 	}
 
