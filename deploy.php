@@ -36,7 +36,7 @@
 		fwrite($myfile, "whoami: $whoami");
 		
 		$git_pull = shell_exec("git pull 2>&1");
-		fwrite($myfile, $git_pull);
+		fwrite($myfile, "git pull: $git_pull");
 		
 		fclose($myfile);
 	}
