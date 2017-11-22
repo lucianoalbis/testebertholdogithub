@@ -1,3 +1,4 @@
 #!/bin/bash
-cd /var/www/html/teste-bertholdo-github
+APPLICATION_PATH=/var/www/html/teste-bertholdo-github
+cd "${APPLICATION_PATH}"
 git pull
