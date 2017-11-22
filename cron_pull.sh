@@ -1,6 +1,5 @@
 #!/bin/bash
-DIR="/var/www/html/testebertholdogithub"
-CD_CMD="$(which cd)"
-GI_CMD="$(which git)"
-$CD_CMD DIR
-$GI_CMD pull
+dir /var/www/html/testebertholdogithub
+env -i git reset —hard
+env -i git pull origin master
+exit
