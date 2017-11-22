@@ -1,6 +1,6 @@
 <?php
-    $output = shell_exec('cd /var/www/html/testebertholdogithub');
-    $output .= shell_exec('git pull');
-    
+    exec('cd /var/www/html/testebertholdogithub 2>&1' , $output, $return_var);
+    echo "<pre>$output</pre>";
+    exec('git pull 2>&1', $output, $return_var);
     echo "<pre>$output</pre>";
 ?>
