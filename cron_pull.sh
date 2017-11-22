@@ -1,3 +1,3 @@
 #!/bin/bash
 cd /var/www/html/teste-bertholdo-github
-git pull
+git pull origin master
