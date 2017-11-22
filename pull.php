@@ -1,4 +1,6 @@
 <?php
-    shell_exec('cd /var/www/html/testebertholdogithub');
-    shell_exec('git pull');
+    $output = shell_exec('cd /var/www/html/testebertholdogithub');
+    $output .= shell_exec('git pull');
+    
+    echo "<pre>$output</pre>";
 ?>
